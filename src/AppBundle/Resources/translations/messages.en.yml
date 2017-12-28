@@ -1,0 +1,11 @@
+menu :
+  Présentation : Presentation
+  Compétences : Skills
+  Réalisations : Achievements
+  Connecter : Log in
+
+connection :
+  identifiant : Login
+  mdp : Password
+  souvenir : Remember me
+  connecter : Log in

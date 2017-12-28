@@ -1,0 +1,11 @@
+menu :
+  Présentation : Présentation
+  Compétences : Compétences
+  Réalisations : Réalisations
+  Connecter : Se connecter
+
+connection :
+  identifiant : Identifiant
+  mdp : Mot de passe
+  souvenir : Se souvenir de moi
+  connecter : Se connecter
