@@ -1,3 +1,23 @@
 app :
   path : /
   defaults : {_controller: AppBundle:Default:index}
+
+presentation :
+  path : /presentation
+  defaults : {_controller: AppBundle:Default:presentation}
+
+competences :
+  path : /competences
+  defaults : {_controller: AppBundle:Default:competences}
+
+realisations :
+  path : /realisations
+  defaults : {_controller: AppBundle:Default:realisations}
+
+blog :
+  path : /blog
+  defaults : {_controller: AppBundle:Default:blog}
+
+contact :
+  path : /contact
+  defaults : {_controller: AppBundle:Default:contact}

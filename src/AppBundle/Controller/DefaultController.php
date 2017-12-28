@@ -11,9 +11,44 @@ class DefaultController extends Controller
 
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
-        return $this->render('AppBundle::index.html.twig', [
+        return $this->render('AppBundle::presentation.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }
+
+    public function presentationAction(Request $request)
+    {
+        return $this->render('AppBundle::presentation.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+        ]);
+    }
+
+    public function competencesAction(Request $request)
+    {
+        return $this->render('AppBundle::competences.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+        ]);
+    }
+
+    public function realisationsAction(Request $request)
+    {
+        return $this->render('AppBundle::realisations.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+        ]);
+    }
+
+    public function blogAction(Request $request)
+    {
+        return $this->render('AppBundle::blog.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+        ]);
+    }
+
+    public function contactAction(Request $request)
+    {
+        return $this->render('AppBundle::contact.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+        ]);
+    }
+
 }
