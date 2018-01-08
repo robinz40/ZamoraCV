@@ -44,11 +44,5 @@ class DefaultController extends Controller
         ]);
     }
 
-    public function contactAction(Request $request)
-    {
-        return $this->render('AppBundle::contact.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
-    }
 
 }
