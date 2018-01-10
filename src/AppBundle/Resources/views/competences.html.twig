@@ -1,1 +1,16 @@
 {% extends 'AppBundle::layout.html.twig' %}
+{% block body %}
+    <div>
+    {%  for competence in competences %}
+        <div class="conteneur-comp">
+            <h1 class="titre-competence">{{ competence.titre }}</h1>
+            <div id="progress-color-fond" class="progress">
+                <div id="progress-color" class="progress-bar" role="progressbar" aria-valuenow="{{ competence.note }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ competence.note }}%">
+                </div>
+            </div>
+            <p class="compdesc-center">{{ competence.description }}</p>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}

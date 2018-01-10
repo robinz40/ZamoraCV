@@ -1,6 +1,3 @@
-composer require jms/translation-bundle "^1.3"
-composer require jms/i18n-routing-bundle
-
-AppKernel :
-	new JMS\TranslationBundle\JMSTranslationBundle(),
-        new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
+composer require friendsofsymfony/user-bundle "~2.0"
+composer require sonata-project/admin-bundle
+composer require sonata-project/doctrine-orm-admin-bundle
