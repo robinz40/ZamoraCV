@@ -37,12 +37,12 @@ services:
             class: AppBundle\Admin\UserAdmin
             arguments: [~, AppBundle\Entity\User, ~]
             tags:
-                - { name: sonata.admin, manager_type: orm, label: User }
+                - { name: sonata.admin, manager_type: orm, group: Contenu, label: User }
             public: true
 
     admin.competence:
                 class: AppBundle\Admin\competenceAdmin
                 arguments: [~, AppBundle\Entity\competence, ~]
                 tags:
-                    - { name: sonata.admin, manager_type: orm, label: Competence }
+                    - { name: sonata.admin, manager_type: orm, group: Contenu, label: Competence }
                 public: true
