@@ -5,12 +5,12 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * competence
+ * Realisation
  *
- * @ORM\Table(name="competence")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\competenceRepository")
+ * @ORM\Table(name="realisation")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\RealisationRepository")
  */
-class competence
+class Realisation
 {
     /**
      * @var int
@@ -24,23 +24,23 @@ class competence
     /**
      * @var string
      *
-     * @ORM\Column(name="titre", type="string", length=30, unique=true)
+     * @ORM\Column(name="titre", type="string", length=50, unique=true)
      */
     private $titre;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="note", type="integer")
+     * @ORM\Column(name="description", type="string", length=1000, nullable=true, unique=true)
      */
-    private $note;
+    private $description;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=255, nullable=true)
+     * @ORM\Column(name="imgpath", type="string", length=255, nullable=true, unique=true)
      */
-    private $description;
+    private $imgpath;
 
 
     /**
@@ -58,7 +58,7 @@ class competence
      *
      * @param string $titre
      *
-     * @return competence
+     * @return Realisation
      */
     public function setTitre($titre)
     {
@@ -78,35 +78,11 @@ class competence
     }
 
     /**
-     * Set note
-     *
-     * @param integer $note
-     *
-     * @return competence
-     */
-    public function setNote($note)
-    {
-        $this->note = $note;
-
-        return $this;
-    }
-
-    /**
-     * Get note
-     *
-     * @return int
-     */
-    public function getNote()
-    {
-        return $this->note;
-    }
-
-    /**
      * Set description
      *
      * @param string $description
      *
-     * @return competence
+     * @return Realisation
      */
     public function setDescription($description)
     {
@@ -123,5 +99,29 @@ class competence
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set imgpath
+     *
+     * @param string $imgpath
+     *
+     * @return Realisation
+     */
+    public function setImgpath($imgpath)
+    {
+        $this->imgpath = $imgpath;
+
+        return $this;
+    }
+
+    /**
+     * Get imgpath
+     *
+     * @return string
+     */
+    public function getImgpath()
+    {
+        return $this->imgpath;
     }
 }

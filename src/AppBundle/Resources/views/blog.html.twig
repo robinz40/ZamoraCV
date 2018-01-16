@@ -1,6 +1,14 @@
 {% extends 'AppBundle::layout.html.twig' %}
 {% block body %}
-    <h1 class="titre-principal">
-        Blog
-    </h1>
+    <div>
+        {%  for article in articles %}
+            <div class="conteneur-comp2">
+                <div class="text-articles">
+                    <a class="titre-competence" href="{{ path("article", {'id': article.id}) }}">{{ article.titre }}</a>
+
+                    <p>{{ article.contenu }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

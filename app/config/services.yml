@@ -37,12 +37,40 @@ services:
             class: AppBundle\Admin\UserAdmin
             arguments: [~, AppBundle\Entity\User, ~]
             tags:
-                - { name: sonata.admin, manager_type: orm, group: Contenu, label: User }
+                - { name: sonata.admin, manager_type: orm, group: Contenu, label: Users }
             public: true
 
     admin.competence:
                 class: AppBundle\Admin\competenceAdmin
                 arguments: [~, AppBundle\Entity\competence, ~]
                 tags:
-                    - { name: sonata.admin, manager_type: orm, group: Contenu, label: Competence }
+                    - { name: sonata.admin, manager_type: orm, group: Contenu, label: Competences }
                 public: true
+
+    admin.realisation:
+                    class: AppBundle\Admin\RealisationAdmin
+                    arguments: [~, AppBundle\Entity\Realisation, ~]
+                    tags:
+                        - { name: sonata.admin, manager_type: orm, group: Contenu, label: Réalisations }
+                    public: true
+                    
+    admin.presentation:
+                        class: AppBundle\Admin\PresentationAdmin
+                        arguments: [~, AppBundle\Entity\Presentation, ~]
+                        tags:
+                            - { name: sonata.admin, manager_type: orm, group: Contenu, label: Présentation }
+                        public: true
+      
+    admin.article:
+                            class: AppBundle\Admin\ArticleAdmin
+                            arguments: [~, AppBundle\Entity\Article, ~]
+                            tags:
+                                - { name: sonata.admin, manager_type: orm, group: Contenu, label: Article }
+                            public: true
+                  
+    admin.commentaire:
+                            class: AppBundle\Admin\CommentaireAdmin
+                            arguments: [~, AppBundle\Entity\Commentaire, ~]
+                            tags:
+                                - { name: sonata.admin, manager_type: orm, group: Contenu, label: Commentaire }
+                            public: true

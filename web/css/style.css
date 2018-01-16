@@ -86,6 +86,16 @@
     border-radius: 100%;
 }
 
+.conteneur-comp2 {
+    padding: 50px;
+    padding-top: 20px;
+    margin-right: 50px;
+    margin-left: 115px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border: 8px solid #660000;
+}
+
 .compdesc-center {
     text-align: center;
 }
@@ -95,3 +105,35 @@
     font-size: 35px;
     text-align: center;
 }
+.text-realisation {
+    position: relative;
+    max-width: 800px;
+    color: #660000;
+}
+
+.imgprofil2 {
+    max-width:500px;
+
+}
+
+.fondimg2 {
+    width: 500px;
+}
+
+.text-articles {
+    color: #660000;
+    text-align: center;
+}
+
+.conteneur-comp3 {
+    padding: 50px;
+    margin: 50px;
+    border: 8px solid #660000;
+}
+
+.conteneur-comp4 {
+    padding: 20px;
+    margin: 10px;
+    border: 5px solid #660000;
+}
+

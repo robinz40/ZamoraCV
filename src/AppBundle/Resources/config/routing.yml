@@ -21,3 +21,9 @@ blog :
 add_user :
   path : /adduser
   defaults : {_controller: AppBundle:Default:adduser}
+
+article :
+  path : /article/{id}
+  defaults : {_controller: AppBundle:Default:article}
+  requirements :
+        id : '\d+'

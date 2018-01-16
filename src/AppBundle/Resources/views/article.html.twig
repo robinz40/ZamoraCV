@@ -1,0 +1,36 @@
+{% extends 'AppBundle::layout.html.twig' %}
+{% block body %}
+    {{ parent() }}
+    <h1 class="titre-principal">
+        {{ article.titre }}
+    </h1>
+    <div class="conteneur-comp3">
+        <div class="text-articles">
+            <p>{{ article.contenu }}</p>
+        </div>
+    </div>
+    {%  for commentaire in commentaires %}
+        <div class="conteneur-comp4">
+            <div class="text-articles">
+                <p> De : {{ commentaire.user.username }}</a>
+
+                <p>{{ commentaire.contenu }}</p>
+            </div>
+        </div>
+    {% endfor %}
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <div class="conteneur-comp4">
+        {{ form_start(form) }}
+
+        <div class="form-group">
+            {{ form_label(form.contenu, "Nouveau commentaire :") }}
+            {{ form_widget(form.contenu, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        {{ form_widget(form.article, { 'attr' : { 'style':'display:none'} }) }}
+        {{ form_widget(form.user, { 'attr' : { 'style':'display:none'} }) }}
+        {{ form_widget(form.save, { 'label': 'Poster commentaire', 'attr': {'class': 'btn btn-success color-btn'}}) }}
+
+        {{ form_end(form) }}
+    </div>
+        {% endif %}
+{% endblock %}
